@@ -1,0 +1,9 @@
+openai
+anthropic
+langchain
+google-generativeai
+gradio
+promise
+asyncio
+python-dotenv
+streamlit==1.24
