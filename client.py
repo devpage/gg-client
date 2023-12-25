@@ -94,7 +94,12 @@ def chat(query,model_name,model_config,api_key,safety_settings,history=None):
     return response.text
         
 if __name__=="__main__":
-    GOOGLE_API_KEY=''
+    GOOGLE_API_KEY = st.sidebar.text_input("GOOGLE_API_KEY", type="password")
+    if not your_key:
+        st.info("Please add your key to continue.")
+        st.stop()
+    
+    genai.configure(api_key=GOOGLE_API_KEY)
     
     user_avator = "🧑‍💻"
     robot_avator = "🤖"
