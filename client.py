@@ -95,7 +95,7 @@ def chat(query,model_name,model_config,api_key,safety_settings,history=None):
         
 if __name__=="__main__":
     GOOGLE_API_KEY = st.sidebar.text_input("GOOGLE_API_KEY", type="password")
-    if not your_key:
+    if not GOOGLE_API_KEY:
         st.info("Please add your key to continue.")
         st.stop()
     
