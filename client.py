@@ -11,7 +11,7 @@ from langchain.llms import OpenAI
 st.set_page_config(page_title='Lite🤖', layout='wide')
 
 os.environ['OPENAI_BASE_URL'] = st.secrets["openai_api_url"]
-OPEN_AI_KEY = st.secrets["openai_api_key"]
+
 # Initialize session states
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -69,7 +69,7 @@ st.title("🤖 Chat Bot with 🧠")
 st.subheader(" Powered by 🦜 LangChain + OpenAI + Streamlit")
 
 # Ask the user to enter their OpenAI API key
-API_O = OPEN_AI_KEY
+API_O = st.sidebar.text_input("API-KEY", type="password")
 
 # Session state storage would be ideal
 if API_O:
