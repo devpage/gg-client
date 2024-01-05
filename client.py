@@ -10,8 +10,8 @@ from langchain.llms import OpenAI
 
 st.set_page_config(page_title='Lite🤖', layout='wide')
 
-os.environ['OPENAI_BASE_URL'] = st.secrets["open_ai_url"]
-OPEN_AI_KEY = st.secrets["open_ai_key"]
+os.environ['OPENAI_BASE_URL'] = st.secrets["openai_api_url"]
+OPEN_AI_KEY = st.secrets["openai_api_key"]
 # Initialize session states
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
