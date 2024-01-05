@@ -9,7 +9,7 @@ from langchain.llms import OpenAI
 
 st.set_page_config(page_title='Lite🤖', layout='wide')
 
-# OPEN_AI_URL = st.secrets["open_ai_url"]
+os.environ['OPENAI_BASE_URL'] = st.secrets["open_ai_url"]
 OPEN_AI_KEY = st.secrets["open_ai_key"]
 # Initialize session states
 if "generated" not in st.session_state:
